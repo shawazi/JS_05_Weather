@@ -10,7 +10,7 @@ return (fahrenheit - 32) * (5/9);
 }
   
 async function getLocation(location) {
-    const geo = `http://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${apiKey}`;
+    const geo = `https://api.openweathermap.org/geo/1.0/direct?q=${location}&appid=${apiKey}`;
 
     const response = await fetch(geo);
 
