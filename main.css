@@ -1,0 +1,65 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,35,72,1) 26%, rgba(1,44,81,1) 35%, rgba(1,49,87,1) 66%, rgba(1,51,89,1) 76%, rgba(1,66,104,1) 88%, rgba(1,70,108,1) 100%, rgba(0,212,255,1) 100%);
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    color: white;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 6rem;
+    text-shadow: 1px 1px 2px white;
+}
+
+.welcome {
+    padding-bottom: 3rem;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+form div {
+    margin-bottom: 1rem;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-top: 4rem;
+    color: white;
+}
+
+.weather-cont {
+    height: 4%vh;
+    width: 4%vw;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 1rem;
+}
