@@ -7,6 +7,7 @@
 body {
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;
     background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(1,35,72,1) 26%, rgba(1,44,81,1) 35%, rgba(1,49,87,1) 66%, rgba(1,51,89,1) 76%, rgba(1,66,104,1) 88%, rgba(1,70,108,1) 100%, rgba(0,212,255,1) 100%);
     font-family: 'Courier New', Courier, monospace;
@@ -26,7 +27,8 @@ main {
     align-items: center;
     flex-direction: column;
     margin-top: 6rem;
-    text-shadow: 1px 1px 2px white;
+    text-shadow: 2px 1px 2px black;
+    color: white;
 }
 
 .welcome {
@@ -53,14 +55,42 @@ section {
     color: white;
 }
 
+#appender {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem;
+}
+
 .weather-cont {
     height: 4%vh;
     width: 4%vw;
     border: 2px solid black;
+    border-radius: 15%;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: flex-end;
     flex-direction: column;
     padding: 1rem 1rem;
     gap: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.center-header {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
 }

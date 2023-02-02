@@ -41,7 +41,11 @@ function display(data) {
 
     weatherCont.classList.add('weather-cont');
 
+    const locationDiv = document.createElement('div');
+    locationDiv.classList.add('center-header');
+
     const location = document.createElement('h3');
+    locationDiv.appendChild(location);
 
     location.textContent = data.name;
 
@@ -51,7 +55,7 @@ function display(data) {
     let tempF = data.main.temp.toFixed(2);
     let tempC = fToC(data.main.temp).toFixed(2);
 
-    console.log(data);
+    // console.log(data);
     // console.log(tempC);
 
 
@@ -73,17 +77,19 @@ function display(data) {
 
     atmos.textContent = `Atmospheric Condition: ${conditions}`;
 
-    console.log(data.wind.speed)
+    // console.log(data.wind.speed)
 
     const windSpeed = data.wind.speed.toFixed(2);
 
     const wind = document.createElement('p');
 
-    wind.textContent = `Wind Speed: ${windSpeed}`
+    wind.textContent = `Wind Speed MPH: ${windSpeed}`
 
 
 
-    weatherCont.appendChild(location);
+
+
+    weatherCont.appendChild(locationDiv);
     weatherCont.appendChild(temp);
     weatherCont.appendChild(real_feel);
     weatherCont.appendChild(atmos);
@@ -148,6 +154,8 @@ form.addEventListener('submit', async (event) => {
     const location = await getLocation(input);
     const weather = await getWeather(location.lat, location.lon);
     display(weather);
+    document.getElementById("weather-form").reset();
+
 });
 
 
