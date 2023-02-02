@@ -59,7 +59,8 @@ section {
     border: 2px solid black;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items:center;
     flex-direction: column;
     padding: 1rem 1rem;
+    gap: 1rem;
 }

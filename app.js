@@ -46,21 +46,49 @@ function display(data) {
     location.textContent = data.name;
 
     const temp = document.createElement('p');
-
-
+    
    
     let tempF = data.main.temp.toFixed(2);
     let tempC = fToC(data.main.temp).toFixed(2);
 
-    console.log(tempF);
-    console.log(tempC);
+    console.log(data);
+    // console.log(tempC);
 
 
 
-    temp.textContent = `(${tempF} F; ${tempC} C)`;
+    temp.textContent = `Temperature: ${tempF} F; ${tempC} C`;
+
+
+    const real_feel = document.createElement('p');
+    let perceived = data.main.feels_like.toFixed(2);
+    let perceivedC = fToC(data.main.feels_like).toFixed(2);
+
+    real_feel.textContent = `Perceived: ${perceived} F; ${perceivedC} C`;
+    
+    // console.log(data.weather[0].main)
+
+    const conditions = data.weather[0].main;
+
+    const atmos = document.createElement('p');
+
+    atmos.textContent = `Atmospheric Condition: ${conditions}`;
+
+    console.log(data.wind.speed)
+
+    const windSpeed = data.wind.speed.toFixed(2);
+
+    const wind = document.createElement('p');
+
+    wind.textContent = `Wind Speed: ${windSpeed}`
+
+
 
     weatherCont.appendChild(location);
     weatherCont.appendChild(temp);
+    weatherCont.appendChild(real_feel);
+    weatherCont.appendChild(atmos);
+    weatherCont.appendChild(wind)
+
 };
 
 const searched = new Set();
