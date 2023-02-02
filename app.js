@@ -49,8 +49,8 @@ function display(data) {
 
 
    
-    let tempF = data.main.temp;
-    let tempC = fToC(data.main.temp);
+    let tempF = data.main.temp.toFixed(2);
+    let tempC = fToC(data.main.temp).toFixed(2);
 
     console.log(tempF);
     console.log(tempC);
@@ -70,21 +70,10 @@ async function handleSearch(event) {
 
     const input = document.querySelector('input').value;
 
-    if (searched.has(input.toLowerCase())) {
-        
-        const error = document.createElement('p');
-        
-        error.textContent = 'You already have data for this location.';
-
-        error.classList.add('error');
-        
-        const append = document.getElementById('appender');
-        append.appendChild(error);
-        return;
-    };
+    const val = document.getElementById('validation');
 
     searched.add(input.toLowerCase());
-
+    
     const location = await getLocation(input);
 
     const weather = await getWeather(location.lat, location.lon);
@@ -92,8 +81,45 @@ async function handleSearch(event) {
     display(weather);
 };
 
+let errorDisp = false;
+
+function errorMsg() {
+
+    const check = document.getElementById('error');
+    if (!errorDisp) {
+    
+    
+
+        const error = document.createElement('p');
+
+        error.innerHTML = "<span style='color: red;'>"+ "You already have data for this location.</span>"
+        
+        error.classList.add('error');
+
+        document.getElementById('error').appendChild(error);
+
+        errorDisp = true;
+    }
+
+};
+
+
 const form = document.getElementById('weather-form');
 
-form.addEventListener('submit', handleSearch);
+form.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const input = document.querySelector('input').value;
+
+    if (searched.has(input.toLowerCase())) {
+        errorMsg();
+        return;
+    }
+
+    searched.add(input.toLowerCase());
+
+    const location = await getLocation(input);
+    const weather = await getWeather(location.lat, location.lon);
+    display(weather);
+});
 
 
