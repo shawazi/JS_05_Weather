@@ -66,9 +66,9 @@ section {
 
 .weather-cont {
     font-family: Georgia, 'Times New Roman', Times, serif;
-    color: black;
+    color: white;
     font-weight: bolder;
-    text-shadow: 1px 0px 1px rgb(121, 121, 228);
+    text-shadow: 2px 1px 3px black;
     height: 4%vh; /* incorrect property values */
     width: 4%vw;  /* incorrect property values */
     border: 2px solid black;
