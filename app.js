@@ -16,7 +16,7 @@ async function getLocation(location) {
 
     const data = await response.json();
 
-    // console.log(data);
+    console.log(data);
     // console.log(data[0].lat)
     // console.log(data[0].lon)
 
@@ -162,7 +162,7 @@ form.addEventListener('submit', async (event) => {
         return;
     } 
     
-    
+
 
     const location = await getLocation(input);
 
