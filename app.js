@@ -16,7 +16,7 @@ async function getLocation(location) {
 
     const data = await response.json();
 
-    console.log(data);
+    // console.log(data);
     // console.log(data[0].lat)
     // console.log(data[0].lon)
 
@@ -74,6 +74,37 @@ function display(data) {
     const conditions = data.weather[0].main;
 
     const atmos = document.createElement('p');
+    atmos.setAttribute("id", "conditions");
+
+    // console.log(data.weather[0].icon)
+
+    const icon = data.weather[0].icon;
+    // console.log(icon);
+
+    let symbol = "http://openweathermap.org/img/wn/";
+    let ext = ".png";
+    
+    const imageURL = symbol + icon + ext;
+
+    // console.log(imageURL);
+
+    // http://openweathermap.org/img/wn/ 
+
+    // .png
+
+    // const weatherImage = document.createElement("img");
+    // weatherImage.src = imageURL;
+
+    // console.log(weatherImage);
+
+    // atmos.insertAdjacentElement("afterbegin", weatherImage);
+
+    // atmos.appendChild(weatherImage);
+
+    // atmos.innerHTML = `<img src="${imageURL}"`
+
+    // console.log(atmos);
+
 
     atmos.textContent = `Atmospheric Condition: ${conditions}`;
 
@@ -83,7 +114,7 @@ function display(data) {
 
     const wind = document.createElement('p');
 
-    wind.textContent = `Wind Speed MPH: ${windSpeed}`
+    wind.textContent = `Wind Speed MPH: ${windSpeed}`;
 
 
 
@@ -93,7 +124,13 @@ function display(data) {
     weatherCont.appendChild(temp);
     weatherCont.appendChild(real_feel);
     weatherCont.appendChild(atmos);
-    weatherCont.appendChild(wind)
+    weatherCont.appendChild(wind);
+
+
+
+    // weatherImage.addEventListener("error", function() {
+    //     console.error("Failed to load image");
+    // });
 
 };
 
