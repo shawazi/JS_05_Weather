@@ -72,7 +72,39 @@ function display(data) {
     // console.log(data.weather[0].main)
 
     const conditions = data.weather[0].main;
+    console.log(conditions);
 
+    if (data.weather[0].main == "Clouds") {
+        weatherCont.classList.add("clouds");
+    } else if (data.weather[0].main == "Mist") {
+        weatherCont.classList.add("mist");
+    } else if (data.weather[0].main == "Rain") {
+        weatherCont.classList.add("rain");
+    } else if (data.weather[0].main == "Snow") {
+        weatherCont.classList.add("snow");
+    } else if (data.weather[0].main == "Clear") {
+        weatherCont.classList.add("clear");
+    } else if (data.weather[0].main == "Smoke") {
+        weatherCont.classList.add("smoke");
+    } else if (data.weather[0].main == "Thunderstorm") {
+        weatherCont.classList.add("thunder");
+    } else if (data.weather[0].main == "Drizzle") {
+        weatherCont.classList.add("drizzle");
+    } else if (data.weather[0].main == "Fog") {
+        weatherCont.classList.add("fog");
+    } else if (data.weather[0].main == "Haze") {
+        weatherCont.classList.add("Haze");
+    } else if (data.weather[0].main == "Dust") {
+        weatherCont.classList.add("dust");
+    } else if (data.weather[0].main == "Ash") {
+        weatherCont.classList.add("ash");
+    } else if (data.weather[0].main == "Tornado") {
+        weatherCont.classList.add("tornado");
+    } else if (data.weather[0].main == "Squall") {
+        weatherCont.classList.add("squall");
+    }
+
+    // console.log(weatherCont);
     const atmos = document.createElement('p');
     atmos.setAttribute("id", "conditions");
 
@@ -114,7 +146,7 @@ function display(data) {
 
     const wind = document.createElement('p');
 
-    wind.textContent = `Wind Speed MPH: ${windSpeed}`;
+    wind.textContent = `Wind Speed Miles/Hour: ${windSpeed}`;
 
 
 

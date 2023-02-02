@@ -59,13 +59,18 @@ section {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: stretch;
     gap: 1rem;
     margin: 2rem;
 }
 
 .weather-cont {
-    height: 4%vh;
-    width: 4%vw;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: bolder;
+    text-shadow: 1px 0px 1px rgb(121, 121, 228);
+    height: 4%vh; /* incorrect property values */
+    width: 4%vw;  /* incorrect property values */
     border: 2px solid black;
     border-radius: 15%;
     display: flex;
@@ -75,17 +80,107 @@ section {
     padding: 1rem 1rem;
     gap: 1rem;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,166,226,1) 0%, rgba(0,212,255,1) 0%, rgba(1,49,87,1) 0%, rgba(1,49,87,1) 2%, rgba(1,49,87,1) 5%, rgba(1,51,89,1) 100%, rgba(1,44,81,1) 100%, rgba(1,70,108,1) 100%);
-}
-
-/* .clouds {
-    background-image: url();
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(17,166,226,1) 0%, rgba(0,212,255,1) 0%, rgba(1,49,87,1) 0%, rgba(1,49,87,1) 2%, rgba(1,49,87,1) 5%, rgba(1,51,89,1) 100%, rgba(1,44,81,1) 100%, rgba(1,70,108,1) 100%); */
 }
 
 .clouds {
-    background-image: url();
-} */
+    background-image: url("../img/clouds.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.mist {
+    background-image: url("../img/mist.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+} 
+
+.rain {
+    background-image: url("../img/rain.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+} 
+
+.snow {
+    background-image: url("../img/snow.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+} 
+
+.clear {
+    background-image: url("../img/clear.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+} 
+
+.smoke {
+    background-image: url("../img/smoke.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.thunder {
+    background-image: url("../img/thunder.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.drizzle {
+    background-image: url("../img/drizzle.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.fog {
+    background-image: url("../img/fog.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.haze {
+    background-image: url("../img/haze.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.dust {
+    background-image: url("../img/dust.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.ash {
+    background-image: url("../img/ash.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.tornado {
+    background-image: url("../img/tornado.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
+
+.squall {
+    background-image: url("../img/squall.jpg") !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 500px;
+}
 
 .center-header {
     height: 100%;
