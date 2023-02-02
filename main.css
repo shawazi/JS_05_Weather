@@ -85,98 +85,98 @@ section {
 }
 
 .clouds {
-    background-image: url("../img/clouds.jpg");
+    background-image: url("./img/clouds.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .mist {
-    background-image: url("../img/mist.jpg");
+    background-image: url("./img/mist.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 } 
 
 .rain {
-    background-image: url("../img/rain.jpg");
+    background-image: url("./img/rain.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 } 
 
 .snow {
-    background-image: url("../img/snow.jpg");
+    background-image: url("./img/snow.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 } 
 
 .clear {
-    background-image: url("../img/clear.jpg");
+    background-image: url("./img/clear.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 } 
 
 .smoke {
-    background-image: url("../img/smoke.jpg");
+    background-image: url("./img/smoke.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .thunder {
-    background-image: url("../img/thunder.jpg");
+    background-image: url("./img/thunder.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .drizzle {
-    background-image: url("../img/drizzle.jpg");
+    background-image: url("./img/drizzle.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .fog {
-    background-image: url("../img/fog.jpg");
+    background-image: url("./img/fog.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .haze {
-    background-image: url("../img/haze.jpg");
+    background-image: url("./img/haze.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .dust {
-    background-image: url("../img/dust.jpg");
+    background-image: url("./img/dust.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .ash {
-    background-image: url("../img/ash.jpg");
+    background-image: url("./img/ash.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .tornado {
-    background-image: url("../img/tornado.jpg");
+    background-image: url("./img/tornado.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
 }
 
 .squall {
-    background-image: url("../img/squall.jpg");
+    background-image: url("./img/squall.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: 500px;
