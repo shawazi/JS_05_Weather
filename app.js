@@ -130,7 +130,7 @@ function errorMsg() {
         
         error.classList.add('error');
 
-        document.getElementById('error').appendChild(error);
+        document.getElementById('weather-form').appendChild(error);
 
         errorDisp = true;
     }
