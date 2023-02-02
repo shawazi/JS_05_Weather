@@ -113,26 +113,37 @@ async function handleSearch(event) {
     const weather = await getWeather(location.lat, location.lon);
 
     display(weather);
+
+    // const errorMessage = document.querySelector('.error');
+
+
+    // I DON'T KNOW HOW TO FIX THIS ERROR HANDLING 
+    if (!(searched.has(input.toLowerCase()))) {
+        // errorMessage.remove();
+        errorDisp = false;
+    };
 };
 
 let errorDisp = false;
 
 function errorMsg() {
 
-    const check = document.getElementById('error');
+    // const check = document.getElementById('error');
+
     if (!errorDisp) {
     
     
 
         const error = document.createElement('p');
 
-        error.innerHTML = "<span style='color: red;'>"+ "You already have data for this location.</span>"
+        error.innerHTML = "<span style='color: red;'>"+ "You already have data for this location, or it isn't a valid location name.</span>"
         
         error.classList.add('error');
 
         document.getElementById('weather-form').appendChild(error);
 
         errorDisp = true;
+
     }
 
 };
@@ -143,18 +154,29 @@ const form = document.getElementById('weather-form');
 form.addEventListener('submit', async (event) => {
     event.preventDefault();
     const input = document.querySelector('input').value;
+    const errorMessage = document.querySelector('.error');
+
 
     if (searched.has(input.toLowerCase())) {
         errorMsg();
         return;
-    }
+    } 
+    
+    
+
+    const location = await getLocation(input);
+
+    if (errorMessage) {
+        errorMessage.remove();
+        errorDisp = false;
+    };
 
     searched.add(input.toLowerCase());
 
-    const location = await getLocation(input);
     const weather = await getWeather(location.lat, location.lon);
     display(weather);
     document.getElementById("weather-form").reset();
+
 
 });
 
